@@ -1,0 +1,33 @@
+[project]
+name = "example"
+version = "0.1.0"
+description = "Template project for LangGraph-based agent development."
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "langgraph>=0.6.7",
+    "python-dotenv>=1.1.1",
+]
+
+[project.scripts]
+server = "example.server.app:main"
+
+[build-system]
+requires = ["uv_build>=0.8.14,<0.9.0"]
+build-backend = "uv_build"
+
+[tool.pytest.ini_options]
+addopts = "-s --disable-warnings"
+testpaths = [
+    "tests",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.4.2",
+]
+server = [
+    "fastapi>=0.116.2",
+    "langgraph-cli[inmem]>=0.4.2",
+    "langgraph-sdk>=0.2.6",
+]
