@@ -1,7 +1,5 @@
 """Command line interface."""
 
-import json
-
 from dotenv import load_dotenv
 
 from example.graph import graph
