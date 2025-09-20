@@ -1,0 +1,5 @@
+math:
+  command: python
+  args:
+    - "./src/example/mcp/math.py"
+  transport: stdio
