@@ -21,6 +21,7 @@ build-backend = "uv_build"
 
 [tool.pytest.ini_options]
 addopts = "-s --disable-warnings"
+asyncio_mode = "auto"
 testpaths = [
     "tests",
 ]
@@ -28,6 +29,7 @@ testpaths = [
 [dependency-groups]
 dev = [
     "pytest>=8.4.2",
+    "pytest-asyncio>=1.2.0",
 ]
 server = [
     "fastapi>=0.116.2",
