@@ -1,19 +1,26 @@
 """MCP math tools."""
 
-from mcp.server.fastmcp import FastMCP
+from typing import Annotated
+from fastmcp import FastMCP
 
 
-mcp = FastMCP("math")
+mcp = FastMCP(name="math")
 
 
-@mcp.tool()
-def add(a: int, b: int) -> int:
+@mcp.tool
+def add(
+    a: Annotated[int, "the first number"],
+    b: Annotated[int, "the second number"],
+) -> int:
     """Add two numbers."""
     return a + b
 
 
-@mcp.tool()
-def multiply(a: int, b: int) -> int:
+@mcp.tool
+def multiply(
+    a: Annotated[int, "the first number"],
+    b: Annotated[int, "the second number"],
+) -> int:
     """Multiply two numbers."""
     return a * b
 
