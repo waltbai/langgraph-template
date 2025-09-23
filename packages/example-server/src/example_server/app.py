@@ -3,7 +3,7 @@
 from fastapi import FastAPI
 import uvicorn
 
-from example.server import router
+from example_server import router
 
 
 app = FastAPI()
