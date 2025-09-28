@@ -5,6 +5,7 @@ description = "Template project for LangGraph-based agent development."
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
+    "example-server",
     "fastmcp>=2.12.3",
     "langchain-mcp-adapters>=0.1.9",
     "langgraph>=0.6.7",
@@ -12,7 +13,7 @@ dependencies = [
 ]
 
 [project.scripts]
-server = "example.server.app:main"
+server = "example_server.app:main"
 cli = "example.cli:main"
 
 [tool.uv.workspace]
@@ -36,10 +37,4 @@ testpaths = [
 dev = [
     "pytest>=8.4.2",
     "pytest-asyncio>=1.2.0",
-]
-server = [
-    "example-server",
-    "fastapi>=0.116.2",
-    "langgraph-cli[inmem]>=0.4.2",
-    "langgraph-sdk>=0.2.6",
 ]
