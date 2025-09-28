@@ -51,7 +51,7 @@ Project file (`./pyproject.toml`) modification:
 | `[project]` | `name=example` | `name="PROJECT_NAME"` |
 | `[project]` | `dependencies=["example-server",...]` |  `dependencies=["PROJECT_NAME-server",...]` |
 | `[project.scripts]` | `server = "example_server.app:main"` | `server = "PROJECT_NAME_server.app:main"` |
-| `[project.scripts]` | `cli = "example.cli:main"` | `cli = "PROJECT.cli:main"` |
+| `[project.scripts]` | `cli = "example.cli:main"` | `cli = "PROJECT_NAME.cli:main"` |
 | `[tool.uv.sources]` | `example-server = { workspace = true }` | `PROJECT_NAME-server = { workspace = true }` |
 
 ### Modify agent
